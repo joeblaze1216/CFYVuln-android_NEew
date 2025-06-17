@@ -8,5 +8,7 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
         continue-on-error: true
+      - name: Sonar cloud
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=joeblaze1216 -Dsonar.organization=Johnny -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
