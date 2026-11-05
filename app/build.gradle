@@ -12,6 +12,7 @@ android {
 
     buildFeatures {
         viewBinding= true
+        buildConfig = true
     }
 
     defaultConfig {
@@ -22,6 +23,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Set NOWPAYMENTS_API_KEY in ~/.gradle/gradle.properties or as an environment variable
+        def nowPaymentsApiKey = project.findProperty("NOWPAYMENTS_API_KEY") ?: System.getenv("NOWPAYMENTS_API_KEY") ?: ""
+        buildConfigField "String", "NOWPAYMENTS_API_KEY", "\"${nowPaymentsApiKey}\""
     }
 
     buildTypes {
