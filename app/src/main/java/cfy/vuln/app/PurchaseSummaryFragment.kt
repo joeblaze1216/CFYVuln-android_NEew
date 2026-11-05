@@ -122,7 +122,7 @@ class PurchaseSummaryFragment : Fragment() {
             ) {
                 override fun getHeaders(): MutableMap<String, String> {
                     val headers = HashMap<String, String>()
-                    headers["x-api-key"] = "7T0WK2K-8TJ41JC-JPAHAMG-GH66X94"
+                    headers["x-api-key"] = BuildConfig.NOWPAYMENTS_API_KEY
                     headers["Content-Type"] = "application/json"
                     return headers
                 }
@@ -206,7 +206,7 @@ class PurchaseSummaryFragment : Fragment() {
             ) {
                 override fun getHeaders(): MutableMap<String, String> {
                     val headers = HashMap<String, String>()
-                    headers["x-api-key"] = "7T0WK2K-8TJ41JC-JPAHAMG-GH66X94"
+                    headers["x-api-key"] = BuildConfig.NOWPAYMENTS_API_KEY
                     headers["Content-Type"] = "application/json"
                     return headers
                 }
